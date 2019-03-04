@@ -5,42 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="styles.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> 
 </head>
 <body>
     <header>
-        <h1>Budget App</h1>
+        <h1 id="heading">Budget App</h1>
     </header>
     <section class='menu'>
-        <div class="budget">
+        <div>
             <input type="number" id="inputBudget">
-            <button>Enter Budget</button>
+            <button class="btn btn-primary" onclick="handlers.initialBudgetSet()">Enter Budget</button>
         </div>
         <div>
             <input type="number" id="inputIncome">
-            <button onclick="handlers.displayIncome()">Enter Income</button>
+            <button class="btn btn-success" onclick="handlers.displayIncome()">Enter Income</button>
         </div>
         <div>
             <input type="number" id="inputExpense">
-            <button onclick="handlers.displayExpense()">Enter Expense</button>
+            <button class="btn btn-danger" onclick="handlers.displayExpense()">Enter Expense</button>
         </div>
 
     </section>
     <section class='numbers'>
-        <div class="totalBudget">
-            1
+        <div id="totalBudget">
+            <h3>Budget</h3>
+            <div>
+                <h1>$</h1>
+                <h2 id="budgetContainer"> </h2>
+            </div>
         </div>
-        <div class="totalIncome">
-            2
+        <div id="totalIncome">
+            <h3>Income</h3>
+            <div>
+                <h1>$</h1>
+                <h2 id="incomeContainer"> </h2>
+            </div>
         </div>
-        <div class="totalExpense">
-            3
+        <div id="totalExpense">
+            <h3>Expenses</h3>
+            <div>
+                <h1>$</h1>
+                <h2 id="expenseContainer"> </h2>
+            </div>
         </div>
-        <div class="endResu">
-            4
-       </div>
-
     </section>
     <section class='list'>
         <div class='listheading'>
@@ -52,9 +62,6 @@
             </ul>
         </div>
     </section>
-    <footer>
-     $ budget app $
-    </footer>
     
     <script type="text/javascript" src="app.js"></script>
 </body>
